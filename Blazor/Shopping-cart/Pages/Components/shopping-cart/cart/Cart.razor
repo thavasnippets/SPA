@@ -1,0 +1,90 @@
+@namespace Shopping_cart
+@using Shopping_cart.Service
+@using Shopping_cart.Model
+@using Shopping_cart.State
+@inject CartService CartService
+@inject CartState cartState
+
+<div class="card shadow-sm">
+    @if (cartList.Length == 0)
+    {
+        <div class="alert alert-info">
+            Empty cart.
+        </div>
+    }
+    else
+    {
+        <div class="card-header">
+            <strong>Cart</strong>
+        </div>
+        <div class="card-bodys">
+            <ul class="list-group">
+                @foreach (var Item in cartList)
+                {
+                    <CartItem cartItem=@Item />
+                }
+
+                <li class="list-group-item active">
+                    Total : <strong>@cartTotal</strong>
+                </li>
+            </ul>
+        </div>
+    }
+</div>
+@code {
+    private Carts[] cartList;
+
+    private long cartTotal;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        cartState.OnChange += StateHasChanged;
+
+        cartList = CartItemManipulate(await CartService.GetCartAsync());
+
+        cartTotal = GetCartTotal();
+    }
+
+    private Carts[] CartItemManipulate(Carts[] products)
+    {
+        List<Carts> cartItems = new List<Carts>();
+        foreach (var prds in products)
+        {
+            bool itemExists = false;
+            foreach (var item in cartItems)
+            {
+                if (item.ProductId == prds.ProductId)
+                {
+                    item.Qty++;
+                    itemExists = true;
+                    break;
+                }
+            }
+
+            if (!itemExists)
+            {
+                cartItems.Add(new Carts
+                {
+                    ProductId = prds.ProductId,
+                    ProductName = prds.ProductName,
+                    Price = prds.Price,
+                    Qty = 1
+                });
+            }
+        }
+        return cartItems.ToArray();
+    }
+
+    private long GetCartTotal()
+    {
+        long total = 0;
+        foreach (var item in cartList)
+        {
+            total += item.Price * item.Qty;
+        }
+
+        return total;
+
+    }
+}

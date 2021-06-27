@@ -1,0 +1,56 @@
+@namespace Shopping_cart
+@using Shopping_cart.Model
+@using Shopping_cart.Service
+@using Shopping_cart.State
+@inject CartService CartService
+@inject CartState cartState
+<div class="card shadow-sm">
+
+    <img class="bd-placeholder-img card-img-top" width="100%" src=@product.ImageUrl />
+
+
+    <div class="card-body">
+        <p class="card-text">
+            <strong>@string.Format("{0:C}", product.Price)</strong>
+
+        </p>
+        <p class="card-text">
+            <strong>@product.Name</strong>
+        </p>
+        <p class="card-text">
+            @{
+                var Description = product.Description.Length <= 75 ? product.Description :
+            product.Description.Substring(0, 75);
+            }
+            @Description
+        </p>
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-primary product-btn" @onclick="HandleAddToCart">Add to
+                    Cart</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary product-btn">View Details</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+@code {
+    [Parameter] public Product product { get; set; }
+
+
+    public async Task HandleAddToCart()
+    {
+        System.Console.WriteLine("1");
+        Carts item = new Carts
+        {
+            ProductId = product.Id,
+            ProductName = product.Name,
+            Price = product.Price,
+            Qty = 1
+        };
+
+        var result = await CartService.AddToCart(item);
+        cartState.SetCart(true);
+        StateHasChanged();
+    }
+}

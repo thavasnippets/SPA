@@ -1,0 +1,31 @@
+@inherits LayoutComponentBase
+
+<div class="page">
+    @* <div class="sidebar">
+
+        </div> *@
+
+
+    <div class="main">
+
+
+        <div class="top-row">
+            <div class="col-md-2">
+                <a class="navbar-brand " href="">Shopping cart <b>(Blazor)</b></a>
+            </div>
+            <div class="col-md-2 offset-md-8">
+                <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                    <a class="btn btn-primary" href="/login">Login</a>
+                    <a class="btn btn-outline-secondary" href="/register">Register</a>
+
+                </nav>
+            </div>
+        </div>
+
+
+
+        <div class="content px-4">
+            @Body
+        </div>
+    </div>
+</div>

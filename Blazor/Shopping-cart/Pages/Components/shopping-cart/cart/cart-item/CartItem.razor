@@ -1,0 +1,19 @@
+@namespace Shopping_cart
+@using Shopping_cart.Model;
+
+<div class="card-item">
+    <span>@cartItem.ProductName</span> X <span>@cartItem.Qty</span>:
+    <strong>
+        @productPrice()
+    </strong>
+</div>
+
+@code {
+    [Parameter]
+    public Carts cartItem { get; set; }
+
+    private long productPrice()
+    {
+        return cartItem.Price * cartItem.Qty;
+    }
+}

@@ -1,0 +1,31 @@
+@namespace Shopping_cart
+@using Shopping_cart.Service
+@using Shopping_cart.Model
+@inject ProductService ProductService
+
+<div class="row">
+    @if (productList.Length > 0)
+    {
+        foreach (var product in productList)
+        {
+            <div class="col-md-4">
+                <ProductItem product=@product></ProductItem>
+            </div>
+        }
+    }
+    else
+    {
+        <div>
+            No Products
+        </div>
+    }
+</div>
+
+@code {
+    private Product[] productList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        productList = await ProductService.GetProductsAsync();
+    }
+}

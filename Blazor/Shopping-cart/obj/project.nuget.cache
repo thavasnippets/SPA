@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "kOij/yDf7PuJWKgAqlMDf9I2bAeFMraQU4PF/mQQfm6hIi7UrT71wjmHfmCP+45ROOsSFpVenf3Ywxa3oR8jWg==",
+  "success": true,
+  "projectFilePath": "C:\\Thava\\Github\\SPA\\Blazor\\Shopping-cart\\Shopping-cart.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\janan\\.nuget\\packages\\json.net\\1.0.33\\json.net.1.0.33.nupkg.sha512",
+    "C:\\Users\\janan\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
