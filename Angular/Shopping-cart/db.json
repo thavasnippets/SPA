@@ -1,0 +1,220 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Adams Pearmain",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Malus_Adams_Parm%C3%A4ne_4593.jpg/800px-Malus_Adams_Parm%C3%A4ne_4593.jpg",
+      "price": 100,
+      "description": "A dessert apple. Similar flavor to Russet, first introduced under the name Norfolk Pippin"
+    },
+    {
+      "id": 2,
+      "name": "Admiral",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Admiral_apple.jpg",
+      "price": 220,
+      "description": "New very popular variety. Flesh firm, crisp, juicy with very good taste. Robust, healthy, scab"
+    },
+    {
+      "id": 3,
+      "name": "Akane",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Admiral_apple.jpg",
+      "price": 100,
+      "description": "Jonathan × Worcester Pearmain. Tangy taste & juicy with very good taste.Robust, healthy, scab"
+    },
+    {
+      "id": 4,
+      "name": "Åkerö",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Malus_%27Ambrosia%27.jpg",
+      "price": 100,
+      "description": "Apple is egg-shaped, medium to large in size and aromatic. Best in November, keeps well till February"
+    }
+  ],
+  "wishlist": [],
+  "cart": [
+    {
+      "productId": 2,
+      "productName": "Admiral",
+      "price": 220,
+      "qty": 1,
+      "id": 1
+    },
+    {
+      "productId": 2,
+      "productName": "Admiral",
+      "price": 220,
+      "qty": 1,
+      "id": 2
+    },
+    {
+      "productId": 1,
+      "productName": "Adams Pearmain",
+      "price": 100,
+      "qty": 1,
+      "id": 3
+    },
+    {
+      "productId": 3,
+      "productName": "Akane",
+      "price": 100,
+      "qty": 1,
+      "id": 4
+    },
+    {
+      "productId": 1,
+      "productName": "Adams Pearmain",
+      "price": 100,
+      "qty": 1,
+      "id": 5
+    },
+    {
+      "productId": 2,
+      "productName": "Admiral",
+      "price": 220,
+      "qty": 1,
+      "id": 6
+    },
+    {
+      "productId": 2,
+      "productName": "Admiral",
+      "price": 220,
+      "qty": 1,
+      "id": 7
+    },
+    {
+      "productId": 3,
+      "productName": "Akane",
+      "price": 100,
+      "qty": 1,
+      "id": 8
+    },
+    {
+      "productId": 3,
+      "productName": "Akane",
+      "price": 100,
+      "qty": 1,
+      "id": 9
+    },
+    {
+      "productId": 3,
+      "productName": "Akane",
+      "price": 100,
+      "qty": 1,
+      "id": 10
+    },
+    {
+      "productId": 3,
+      "productName": "Akane",
+      "price": 100,
+      "qty": 1,
+      "id": 11
+    },
+    {
+      "productId": 3,
+      "productName": "Akane",
+      "price": 100,
+      "qty": 1,
+      "id": 12
+    },
+    {
+      "productId": 3,
+      "productName": "Akane",
+      "price": 100,
+      "qty": 1,
+      "id": 13
+    },
+    {
+      "productId": 3,
+      "productName": "Akane",
+      "price": 100,
+      "qty": 1,
+      "id": 14
+    },
+    {
+      "productId": 2,
+      "productName": "Admiral",
+      "price": 220,
+      "qty": 1,
+      "id": 15
+    },
+    {
+      "productId": 2,
+      "productName": "Admiral",
+      "price": 220,
+      "qty": 1,
+      "id": 16
+    },
+    {
+      "productId": 2,
+      "productName": "Admiral",
+      "price": 220,
+      "qty": 1,
+      "id": 17
+    },
+    {
+      "productId": 2,
+      "productName": "Admiral",
+      "price": 220,
+      "qty": 1,
+      "id": 18
+    },
+    {
+      "productId": 1,
+      "productName": "Adams Pearmain",
+      "price": 100,
+      "qty": 1,
+      "id": 19
+    },
+    {
+      "productId": 1,
+      "productName": "Adams Pearmain",
+      "price": 100,
+      "qty": 1,
+      "id": 20
+    },
+    {
+      "productId": 1,
+      "productName": "Adams Pearmain",
+      "price": 100,
+      "qty": 1,
+      "id": 21
+    },
+    {
+      "productId": 2,
+      "productName": "Admiral",
+      "price": 220,
+      "qty": 1,
+      "id": 22
+    },
+    {
+      "productId": 2,
+      "productName": "Admiral",
+      "price": 220,
+      "qty": 1,
+      "id": 23
+    },
+    {
+      "productId": 1,
+      "productName": "Adams Pearmain",
+      "price": 100,
+      "qty": 1,
+      "id": 24
+    },
+    {
+      "productId": 1,
+      "productName": "Adams Pearmain",
+      "price": 100,
+      "qty": 1,
+      "id": 25
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
