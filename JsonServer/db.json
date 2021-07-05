@@ -1,0 +1,51 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Adams Pearmain",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Malus_Adams_Parm%C3%A4ne_4593.jpg/800px-Malus_Adams_Parm%C3%A4ne_4593.jpg",
+      "price": 100,
+      "description": "A dessert apple. Similar flavor to Russet, first introduced under the name Norfolk Pippin"
+    },
+    {
+      "id": 2,
+      "name": "Admiral",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Admiral_apple.jpg",
+      "price": 220,
+      "description": "New very popular variety. Flesh firm, crisp, juicy with very good taste. Robust, healthy, scab"
+    },
+    {
+      "id": 3,
+      "name": "Akane",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Admiral_apple.jpg",
+      "price": 100,
+      "description": "Jonathan × Worcester Pearmain. Tangy taste & juicy with very good taste.Robust, healthy, scab"
+    },
+    {
+      "id": 4,
+      "name": "Åkerö",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Malus_%27Ambrosia%27.jpg",
+      "price": 100,
+      "description": "Apple is egg-shaped, medium to large in size and aromatic. Best in November, keeps well till February"
+    }
+  ],
+  "wishlist": [],
+  "cart": [
+    {
+      "productId": 2,
+      "productName": "Admiral",
+      "price": 220,
+      "qty": 1,
+      "id": 1
+    },
+    {
+      "productId": 2,
+      "productName": "Admiral",
+      "price": 220,
+      "qty": 1,
+      "id": 2
+    } ],
+  "profile": {
+    "name": "typicode"
+  }
+}
