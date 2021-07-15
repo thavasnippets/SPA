@@ -72,3 +72,19 @@ I’ve implemented the Shopping cart application using Balzor, React & Angular.
 Github: <https://github.com/thavasnippets/SPA>
 
 ![ShoppingCart](https://user-images.githubusercontent.com/15138302/125741682-3628bdfc-c0aa-4b13-a384-4e627020d8f8.png)
+
+## State of Javascript Survey result 2020
+
+<i>Source: https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/</i>
+
+**Satisfaction**
+
+![Satisfaction](https://user-images.githubusercontent.com/15138302/125782327-6efb1897-11ee-4647-a338-6bb912fc0116.JPG)
+
+**Interest**
+
+![Interest](https://user-images.githubusercontent.com/15138302/125782360-a66f92db-b988-4b89-b24d-a9daca7ef10a.JPG)
+
+**Usage**
+
+![Usage](https://user-images.githubusercontent.com/15138302/125782349-de85bd24-e1eb-4b3a-82e1-a1d1dd5717a2.JPG)
