@@ -5,23 +5,17 @@ using Shopping_cart.Model;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Net.Http;
 using System.Net.Http.Json;
-using Shopping_cart.State;
+using Microsoft.AspNetCore.Components;
+using Shopping_cart.Store.Cart;
+using Blazor.Fluxor;
 
 namespace Shopping_cart.Service
 {
     public class CartService
     {
 
-        public CartState cartState { get; set; }
-        public CartService(CartState state)
-        {
-            cartState = state;
-
-        }
         public Task<Carts[]> GetCartAsync()
         {
 

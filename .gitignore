@@ -1,0 +1,43 @@
+
+# REACT
+
+# dependencies
+/React/shopping-cart/node_modules
+/React/shopping-cart/.pnp
+/React/shopping-cart/.pnp.js
+
+# testing
+/React/shopping-cart/coverage
+
+# production
+/React/shopping-cart/build
+
+# misc
+/React/shopping-cart/.DS_Store
+/React/shopping-cart/.env.local
+/React/shopping-cart/.env.development.local
+/React/shopping-cart/.env.test.local
+/React/shopping-cart/.env.production.local
+
+/React/shopping-cart/npm-debug.log*
+/React/shopping-cart/yarn-debug.log*
+/React/shopping-cart/yarn-error.log*
+
+#BLAZOR
+
+Blazor/Shopping-cart/bin/
+Blazor/Shopping-cart/obj/
+Blazor/Shopping-cart/.vscode/
+Blazor/Shopping-cart/obj/Debug/net5.0/RazorDeclaration/Shopping-cart.pdb
+Blazor/Shopping-cart/obj/Debug/net5.0/Shopping-cart.assets.cache
+Blazor/Shopping-cart/obj/Debug/net5.0/Shopping-cart.csproj.AssemblyReference.cache
+Blazor/Shopping-cart/obj/Debug/net5.0/Shopping-cart.csproj.FileListAbsolute.txt
+Blazor/Shopping-cart/obj/Debug/net5.0/Shopping-cart.Views.dll
+Blazor/Shopping-cart/obj/project.assets.json
+Blazor/Shopping-cart/obj/project.nuget.cache
+Blazor/Shopping-cart/obj/Shopping-cart.csproj.nuget.dgspec.json
+Blazor/Shopping-cart/obj/Shopping-cart.csproj.nuget.g.props
+Blazor/Shopping-cart/obj/Shopping-cart.csproj.nuget.g.targets
+*.pdb
+*.cache
+*.dll

@@ -1,16 +1,22 @@
 @namespace Shopping_cart
 @using Shopping_cart.Service
 @using Shopping_cart.Model
-@using Shopping_cart.State
+@inherits Blazor.Fluxor.Components.FluxorComponent
 @inject CartService CartService
-@inject CartState cartState
+@using Blazor.Fluxor
+@using Shopping_cart.Store.Cart
+@inject IDispatcher Dispatcher
+@inject IState<CartState> FetchDataState
+
+
 
 <div class="card shadow-sm">
-    @if (cartList.Length == 0)
+    @if (FetchDataState.Value.carts == null || FetchDataState.Value.carts.Length == 0)
     {
         <div class="alert alert-info">
             Empty cart.
         </div>
+
     }
     else
     {
@@ -19,31 +25,32 @@
         </div>
         <div class="card-bodys">
             <ul class="list-group">
-                @foreach (var Item in cartList)
+                @foreach (var Item in CartItemManipulate(FetchDataState.Value.carts))
                 {
                     <CartItem cartItem=@Item />
                 }
 
                 <li class="list-group-item active">
-                    Total : <strong>@cartTotal</strong>
+                    Total : <strong>@GetCartTotal(FetchDataState.Value.carts)</strong>
                 </li>
             </ul>
         </div>
     }
 </div>
 @code {
-    private Carts[] cartList;
 
-    private long cartTotal;
 
-    protected override async Task OnInitializedAsync()
+
+
+    protected override void OnInitialized()
     {
+        Console.WriteLine("Inside cart");
+        // cartList = CartItemManipulate(await CartService.GetCartAsync());
+        Dispatcher.Dispatch(new CartGetDataAction());
 
-        cartState.OnChange += StateHasChanged;
 
-        cartList = CartItemManipulate(await CartService.GetCartAsync());
-
-        cartTotal = GetCartTotal();
+        @* cartList = CartItemManipulate(FetchDataState.Value.carts);
+            cartTotal = GetCartTotal(); *@
     }
 
     private Carts[] CartItemManipulate(Carts[] products)
@@ -76,7 +83,7 @@
         return cartItems.ToArray();
     }
 
-    private long GetCartTotal()
+    private long GetCartTotal(Carts[] cartList)
     {
         long total = 0;
         foreach (var item in cartList)

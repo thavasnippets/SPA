@@ -1,8 +1,4 @@
 @namespace Shopping_cart
-@implements IDisposable
-@using Shopping_cart.State
-@inject CartState cartState
-
 <div class="row">
     <div class="col">
         <Filter />
@@ -14,24 +10,3 @@
         <Cart />
     </div>
 </div>
-@code {
-    protected override async Task OnInitializedAsync()
-    {
-
-        await Task.Delay(1).ConfigureAwait(false);
-        Console.WriteLine("Shoppingcart Component");
-        await this.InvokeAsync(() => this.StateHasChanged());
-
-    }
-    public void Dispose()
-    {
-        cartState.OnChange -= OnMyChangeHandler;
-    }
-
-    private async void OnMyChangeHandler()
-    {
-        Console.WriteLine("AppData changed.");
-        await Task.Delay(1).ConfigureAwait(false);
-
-    }
-}

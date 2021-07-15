@@ -1,25 +1,24 @@
 using System;
-
+using System.Collections.Generic;
+using Shopping_cart.Model;
+using Microsoft.AspNetCore.Components;
 namespace Shopping_cart.State
 {
     public class CartState
     {
-        public bool ItemAdded { get; private set; }
-
+        public List<Carts> carts { get; set; }
+        public string MyProperty { get; set; }
         public event Action OnChange;
 
-        public void SetCart(bool state)
+        public void SetCart(Carts item)
         {
 
-            ItemAdded = state;
+            MyProperty = "Thava";
+            // carts.Add(item);
             NotifyStateChanged();
         }
 
-        private void NotifyStateChanged()
-        {
-            Console.WriteLine("Event1");
-            OnChange?.Invoke();
-        }
+        private void NotifyStateChanged() => OnChange?.Invoke();
 
 
     }

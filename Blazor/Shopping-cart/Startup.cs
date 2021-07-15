@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Blazor.Fluxor;
+using Blazor.Fluxor.ReduxDevTools;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -12,6 +14,7 @@ using Microsoft.Extensions.Hosting;
 using Shopping_cart.Data;
 using Shopping_cart.Service;
 using Shopping_cart.State;
+
 
 namespace Shopping_cart
 {
@@ -30,6 +33,13 @@ namespace Shopping_cart
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+
+            services.AddFluxor(options =>
+            {
+                options
+                        .UseDependencyInjection(typeof(Startup).Assembly);
+            });
+
             services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<ProductService>();
             services.AddSingleton<CartService>();

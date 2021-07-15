@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Blazor.Fluxor" Version="2.0.1" />
+    <PackageReference Include="Fluxor.Blazor.Web" Version="4.1.0" />
+    <PackageReference Include="Fluxor.Blazor.Web.ReduxDevTools" Version="4.1.0" />
     <PackageReference Include="JSON.Net" Version="1.0.33" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>

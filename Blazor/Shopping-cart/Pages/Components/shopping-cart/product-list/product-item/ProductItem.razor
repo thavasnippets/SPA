@@ -1,9 +1,15 @@
 @namespace Shopping_cart
 @using Shopping_cart.Model
 @using Shopping_cart.Service
-@using Shopping_cart.State
+@inherits Blazor.Fluxor.Components.FluxorComponent
 @inject CartService CartService
-@inject CartState cartState
+@using Blazor.Fluxor
+@using Shopping_cart.Store.Cart
+@inject IDispatcher Dispatcher
+
+@inject NavigationManager NavManager
+
+
 <div class="card shadow-sm">
 
     <img class="bd-placeholder-img card-img-top" width="100%" src=@product.ImageUrl />
@@ -38,9 +44,9 @@
     [Parameter] public Product product { get; set; }
 
 
-    public async Task HandleAddToCart()
+    protected async Task HandleAddToCart()
     {
-        System.Console.WriteLine("1");
+        System.Console.WriteLine(product);
         Carts item = new Carts
         {
             ProductId = product.Id,
@@ -50,7 +56,9 @@
         };
 
         var result = await CartService.AddToCart(item);
-        cartState.SetCart(true);
-        StateHasChanged();
+
+        Dispatcher.Dispatch(new CartGetDataAction());
+
+
     }
 }
