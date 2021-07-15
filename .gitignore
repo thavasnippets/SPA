@@ -41,3 +41,4 @@ Blazor/Shopping-cart/obj/Shopping-cart.csproj.nuget.g.targets
 *.pdb
 *.cache
 *.dll
+*.cache
